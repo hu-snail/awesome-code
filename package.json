@@ -1,0 +1,22 @@
+{
+  "name": "awesome-code",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "github-markdown-css": "^5.1.0",
+    "prismjs": "^1.28.0",
+    "vue": "^3.2.25",
+    "vue-router": "^4.0.15"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.3.3",
+    "sass": "^1.52.1",
+    "vite": "^2.9.9",
+    "vite-plugin-markdown": "^2.0.2"
+  }
+}
