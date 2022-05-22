@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import "github-markdown-css";
+// import "github-markdown-css";
+import './styles/gitbook-teal.css'
 
 import router from "./routes";
 

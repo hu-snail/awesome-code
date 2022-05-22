@@ -1,10 +1,13 @@
 <template>
-  <div class="preview-container">
-    <h2>
-      {{ component.__sourceCodeTitle }}
+  <div class="preview-wrap">
+    <div class="preview-head">
+        <h2 class="preview-head_title">
+            {{  component.__sourceCodeTitle }}
+        </h2>
+      
       <button @click="hideCode" v-if="codeVisible">隐藏代码</button>
       <button @click="showCode" v-else>查看代码</button>
-    </h2>
+    </div>
     <div class="preview-container-component">
       <component :is="component" />
     </div>
@@ -16,13 +19,13 @@
 </template>
 <script setup>
 import { computed, ref } from "vue";
+import { baseParse } from "@vue/compiler-core";
 import Prism from  "prismjs";
 import "prismjs/themes/prism.css";
 const props = defineProps({
   component: Object,
 });
 const html = computed(() => {
-    console.log(props.component.__sourceCode, '---', Prism)
   return Prism.highlight(
     props.component.__sourceCode,
     Prism.languages.html,
@@ -33,20 +36,22 @@ const showCode = () => (codeVisible.value = true);
 const hideCode = () => (codeVisible.value = false);
 const codeVisible = ref(false);
 </script>
-<style scoped>
-.preview-container {
+<style lang="scss" scoped>
+.preview-wrap{
   border: 1px solid #d9d9d9;
   margin: 32px 0px 32px;
   min-width: 300px;
-}
-h2 {
-    font-size: 20px;
+  .preview-head{
     padding: 8px 16px;
     border-bottom: 1px solid #d9d9d9;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    &_title{
+        font-size: 20px;
+    }
   }
+}
 .preview-container-component {
     padding: 16px;
     display: flex;

@@ -143,6 +143,7 @@ const mainStyle = computed(() => {
       padding: 32px 24px 100px 36px;
       transition: all 250ms ease;
       overflow: auto;
+    margin: 15px 20px;
 
       h1 {
         margin: 28px 0 20px 0;

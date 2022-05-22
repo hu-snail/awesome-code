@@ -1,4 +1,4 @@
-<preview>基础</preview>
+<block-title>基础</block-title>
 <template>
   <div style="margin: 10px 0px; width: 100%">
     <button theme="default">默认按钮</button>
