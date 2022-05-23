@@ -1,19 +1,21 @@
 html.dark {
     --color-primary:#2caf92;;
-    --bg-color-page:#0a0a0a;
-    --bg-color: #141414;
+    --bg-color-page: #090a1b;
+    --bg-color: #161627;
     --bg-color-overlay: #1d1e1f;
     --text-color: #E5EAF3;
     --border-color: #4C4D4F;
+    --color-header-bg: #0b0a10;
 }
 
 :root{
     /* color */
     --color-primary:#2caf92;;
-    --bg-color-page:#f2f3f5;
+    --bg-color-page: #f2f3f5;
     --bg-color: #ffffff;
     --bg-color-overlay: #ffffff;
     --text-color: #303133;
+    --color-header-bg: #ffffff;
 
     /* z-index */
     --nav-z-index: 20;
@@ -34,7 +36,7 @@ html.dark {
     --border-color: #dcdfe6;
 
     /* height */
-    --header-height: 55px;
+    --header-height: 60px;
     --input-height: 35px;
 
     /* padding */
