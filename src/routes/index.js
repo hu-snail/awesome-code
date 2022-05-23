@@ -1,5 +1,6 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 
+import Layout from '@/layout/index.vue'
 import Home from "@/views/home/index.vue";
 import Doc from "@/views/doc/index.vue";
 import Demo from "@/views/demo/index.vue";
@@ -16,7 +17,7 @@ const router = createRouter({
     {
       path: "/doc",
       redirect: "/doc/intro",
-      component: Doc,
+      component: Layout,
       children: docRoutes,
     },
   ],

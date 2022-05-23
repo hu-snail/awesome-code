@@ -10,6 +10,7 @@
   "dependencies": {
     "@vueuse/head": "^0.7.6",
     "axios": "^0.27.2",
+    "boxicons": "^2.1.2",
     "github-markdown-css": "^5.1.0",
     "prismjs": "^1.28.0",
     "vue": "^3.2.25",

@@ -5,7 +5,7 @@ import vitePluginVue from "./plugins/vue-custom-blocks-plugin";
 import Markdown from 'vite-plugin-md'
 import prism from 'markdown-it-prism'
 
-const markdownWrapperClasses = 'prose prose-sm m-auto text-left'
+const markdownWrapperClasses = 'md-container prose prose-sm m-auto text-left'
 
 // https://vitejs.dev/config/
 export default defineConfig({

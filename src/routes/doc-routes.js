@@ -7,8 +7,8 @@ const docMenus = {
     { path: "intro", component: Intro, name: "介绍" },
     { path: "get-started", component: GetStarted, name: "快速使用" },
   ],
-  通用组件: [
-    { path: "button", component: ButtonDoc, name: "按钮 Button" }
+  Javascript: [
+    { path: "button", component: ButtonDoc, name: "日期时间 DataTime" }
   ]
 }
 
