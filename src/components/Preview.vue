@@ -19,7 +19,6 @@
 </template>
 <script setup>
 import { computed, ref } from "vue";
-import { baseParse } from "@vue/compiler-core";
 import Prism from  "prismjs";
 import "prismjs/themes/prism.css";
 const props = defineProps({

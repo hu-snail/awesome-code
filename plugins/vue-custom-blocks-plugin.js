@@ -11,8 +11,6 @@ const vitePluginVue = {
       return;
     }
     let path = `.${id.match(/\/src\/views\/doc\/.*\.preview\.vue/)[0]}`;
-    console.log(path, 'path')
-    
     const file = fs.readFileSync(path).toString();
     const parsed = baseParse(file).children.find((n) => n.tag === "block-title");
     const title = parsed.children[0].content;

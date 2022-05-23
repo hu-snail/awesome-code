@@ -1,10 +1,8 @@
 ---
 title: Awesome Title
-description: Describe this awesome content
-tags:
-  - "great"
-  - "awesome"
-  - "rad"
+meta:
+  - name: description
+    content: awesome code 快速开始
 ---
 
 # This is awesome

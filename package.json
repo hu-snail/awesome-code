@@ -3,11 +3,12 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --port 8091",
     "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@vueuse/head": "^0.7.6",
     "axios": "^0.27.2",
     "github-markdown-css": "^5.1.0",
     "prismjs": "^1.28.0",
@@ -16,8 +17,9 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.3.3",
+    "markdown-it-prism": "^2.2.4",
     "sass": "^1.52.1",
     "vite": "^2.9.9",
-    "vite-plugin-markdown": "^2.0.2"
+    "vite-plugin-md": "^0.13.1"
   }
 }
