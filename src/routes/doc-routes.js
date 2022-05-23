@@ -1,9 +1,9 @@
-import GetStarted from "@/views/guide/get-started/index.vue";
-import Intro from "@/views/guide/intro/index.vue";
+import GetStarted from "markdown/get-started.md";
+import Intro from "markdown/intro.md";
 import ButtonDoc from "@/views/doc/button/index.vue";
 
 const docMenus = {
-  文档: [
+  指南: [
     { path: "intro", component: Intro, name: "介绍" },
     { path: "get-started", component: GetStarted, name: "快速使用" },
   ],

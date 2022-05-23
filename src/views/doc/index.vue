@@ -10,7 +10,7 @@
             :key="index"
           >
             <span class="menu-group-title text-overflow">
-              {{ index }}{{ index !== "文档" ? `（${itemx.length}）` : "" }}
+              {{ index }}
             </span>
             <router-link
               v-for="(itemy, indey) in itemx"
