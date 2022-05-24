@@ -8,14 +8,20 @@
         </div>
         <div class="card-item">
           <div class="card-item-content">
-            <box-icon color="#fff" name='home-heart'></box-icon>
+            <icon-home color="#fff"></icon-home >
             <span class="card-item-title">首页</span>
           </div>
         </div>
-       <div class="card-item">
+        <div class="card-item">
           <div class="card-item-content active">
-            <box-icon color="#fff" name='code-alt'></box-icon>
+            <icon-code color="#fff"></icon-code>
             <span class="card-item-title">组件</span>
+          </div>
+        </div>
+        <div class="card-item">
+          <div class="card-item-content">
+            <icon-code-brackets color="#fff"></icon-code-brackets>
+            <span class="card-item-title">Javascript</span>
           </div>
         </div>
       </div>
@@ -72,7 +78,7 @@ import { docMenus } from "@/routes/doc-routes.js";
   overflow-y: auto;
   box-shadow: 0 1px 4px rgb(0 21 41 / 8%);
   &-card {
-    width: 60px;
+    width: 100px;
     height: 100%;
     background-color: #282c34;
     .card-item {
@@ -83,7 +89,7 @@ import { docMenus } from "@/routes/doc-routes.js";
         color: #fff;
       }
       &-content{
-        width: 54px;
+        width: 94px;
         height: 54px;
         border-radius: 5px;
         display: flex;
@@ -93,8 +99,14 @@ import { docMenus } from "@/routes/doc-routes.js";
         text-align: center;
         margin: 0 auto;
         color: #fff;
+        justify-content: center;
+        font-size: 14px;
+        cursor: pointer;
         &.active {
           background-color: var(--color-primary);
+        }
+        &:hover {
+             background-color: var(--color-primary);
         }
       } 
     }

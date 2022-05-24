@@ -28,7 +28,7 @@ import Main from './main/index.vue'
     .main-wrapper {
         position: relative;
         top: var(--header-height);
-        left: 280px;
+        left: 320px;
         width: calc(100vw - 280px);
         height: 100vh;
         overflow-y: auto;

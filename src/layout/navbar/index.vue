@@ -8,7 +8,7 @@
                     <div class="item">Javascript</div>
                     <div class="item">Vue</div>
                     <div class="search-box">
-                        <box-icon class="icon" name='search' color="#666"></box-icon>
+                        <icon-search class="icon" color="#666"></icon-search>
                         <input placeholder="搜索" type="text" class="search-input">
                     </div>
                    
@@ -23,7 +23,7 @@
     position: fixed;
     top: 0;
     right: 0;
-    left: 280px;
+    left: 320px;
     z-index: var(--nav-z-index);
     background-color: var(--color-header-bg);
     &-wrapper {
@@ -50,7 +50,7 @@
                     .icon {
                         position: absolute;
                         right: 10px;
-                        top: 6px;
+                        top: 10px;
                     }
                     .search-input {
                         background-color: var(--bg-color-page);

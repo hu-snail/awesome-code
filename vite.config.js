@@ -1,7 +1,7 @@
 import path from 'path'
 import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
-import vitePluginVue from "./plugins/vue-custom-blocks-plugin";
+import createBlockTitle from "./plugins/createBlockTitle";
 import Markdown from 'vite-plugin-md'
 import prism from 'markdown-it-prism'
 
@@ -27,6 +27,6 @@ export default defineConfig({
         prism,
       ],
     }),
-    vitePluginVue
+    createBlockTitle
   ]
 })
