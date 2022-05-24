@@ -6,17 +6,19 @@
       <article  v-html="content"></article>
     </div>
     <div class="anchor-content">
-      <h4 class="top-title">目录</h4>
-      <div class="anchor-box">
-        <div
-        class="anchor-item"
-        v-for="(item, index) in toc"
-        :key="index"
-        :class="'anchor-item-' + item.level"
-        >
-         <a class="anchor-item-title" :href="`#heading-${index + 1}`">
-          <span v-html="decode(item.content)"></span>
-          </a>
+      <div class="sticky-box">
+        <h4 class="top-title">目录</h4>
+        <div class="anchor-box">
+          <div
+          class="anchor-item"
+          v-for="(item, index) in toc"
+          :key="index"
+          :class="'anchor-item-' + item.level"
+          >
+          <a class="anchor-item-title" :href="`#heading-${index + 1}`">
+            <span v-html="decode(item.content)"></span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -65,11 +67,21 @@ const handleToBlock = (id) => {
   }
   .anchor-content {
     width: 240px;
-    padding: 15px 20px;
-    border-radius: 10px;
     box-sizing: border-box;
-    background-color: var(--bg-color);
     font-size: 14px;
+    .sticky-box {
+      padding: 15px 20px;
+      border-radius: 10px;
+      position: fixed;
+      top: 90px;
+      bottom: 20px;
+      background-color: var(--bg-color);
+      overflow: hidden;
+      .anchor-box {
+        height: calc(100vh - 200px);
+        overflow-y: auto;
+      }
+    }
     .top-title {
       padding-bottom: 10px;
       border-bottom: 1px solid #ddd;
