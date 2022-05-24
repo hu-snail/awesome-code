@@ -34,7 +34,6 @@
   </div>
 </template>
 <script setup>
-import Topnav from "@/components/Topnav.vue";
 import { inject, computed } from "vue";
 import { docMenus } from "@/routes/doc-routes.js";
 const asideVisible = inject("asideVisible");

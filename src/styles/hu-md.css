@@ -1,3 +1,58 @@
+:root {
+    --primary-color: #15ac8e;
+    --primary-color-darkest: #083d33;
+    --primary-color-darker2: #0d5748;
+    --primary-color-darker: #11977d;
+}
+
+.md-container {
+    color: var(--text-color);
+    max-width: 740px;
+    margin: 0 auto;
+    background-color: var(--bg-color);
+    padding: 15px 20px;
+    border-radius: 10px;
+}
+p {
+    max-width: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    word-wrap: break-word;
+    text-align: justify;
+}
+p > code {
+    background-color: #e7f5ee;
+    color: var(--primary-color);
+    border-radius: 4px;
+    padding: 2px 6px;
+    margin: 0 2px;
+}
+img {
+    max-width: 100%;
+}
+a {
+    color: var(--primary-color);
+    text-decoration: none !important;
+    transition-duration: 0.2s;
+    transition-property: color;
+}
+
+a:hover {
+    color: var(--primary-color-darker);
+}
+
+mark a,
+mark .md-content.md-url {
+    color: var(--primary-color-darker2);
+}
+mark a:hover {
+    color: var(--primary-color-darkest);
+}
+
+.ty-preferences a {
+    color: var(--primary-color);
+}
+
 .code-card {
     position: relative;
 }

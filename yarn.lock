@@ -631,6 +631,11 @@ uc.micro@^1.0.1, uc.micro@^1.0.5:
   resolved "https://registry.npmmirror.com/uc.micro/-/uc.micro-1.0.6.tgz#9c411a802a409a91fc6cf74081baba34b24499ac"
   integrity sha512-8Y75pvTYkLJW2hWQHXxoqRgV7qb9B+9vFEtidML+7koHUFapnVJAZ6cKs+Qjz5Aw3aZWHMC6u0wJE3At+nSGwA==
 
+vfonts@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.npmmirror.com/vfonts/-/vfonts-0.0.3.tgz#999d66fecea18efee3f2b966c81101ae8ce01a29"
+  integrity sha512-nguyw8L6Un8eelg1vQ31vIU2ESxqid7EYmy8V+MDeMaHBqaRSkg3dTBToC1PR00D89UzS/SLkfYPnx0Wf23IQQ==
+
 vite-plugin-markdown@^2.0.2:
   version "2.0.2"
   resolved "https://registry.npmmirror.com/vite-plugin-markdown/-/vite-plugin-markdown-2.0.2.tgz#7e8dce8349713e9bda1184f13092d4b87d3672c3"
