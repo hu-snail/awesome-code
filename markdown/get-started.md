@@ -17,11 +17,11 @@ meta:
 
 ## Overview
 
-* Follows [CommonMark](https://commonmark.org)
-* Optionally follows [GitHub Flavored Markdown](https://github.github.com/gfm/)
-* Renders actual React elements instead of using `dangerouslySetInnerHTML`
-* Lets you define your own components (to render `MyHeading` instead of `h1`)
-* Has a lot of plugins
+* [x] Follows [CommonMark](https://commonmark.org)
+* [x] Optionally follows [GitHub Flavored Markdown](https://github.github.com/gfm/)
+* [x] Renders actual React elements instead of using `dangerouslySetInnerHTML`
+* [x] Lets you define your own components (to render `MyHeading` instead of `h1`)
+* [x] Has a lot of plugins
 
 ## Table of contents
 

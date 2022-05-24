@@ -18,6 +18,12 @@
             <span class="card-item-title">组件</span>
           </div>
         </div>
+         <div class="card-item">
+          <div class="card-item-content">
+            <icon-collect-laptop color="#fff"></icon-collect-laptop>
+            <span class="card-item-title">Vue物料</span>
+          </div>
+        </div>
         <div class="card-item">
           <div class="card-item-content">
             <icon-code-brackets color="#fff"></icon-code-brackets>
@@ -44,24 +50,6 @@
           </div>
         </div>
       </div>
-        <!-- <div class="menu">
-          <div
-            class="menu-group"
-            v-for="(itemx, index) in docMenus"
-            :key="index"
-          >
-            <span class="menu-group-title text-overflow">
-              {{ index }}
-            </span>
-            <router-link
-              v-for="(itemy, indey) in itemx"
-              :key="indey"
-              class="menu-item text-overflow"
-              :to="`/doc/${itemy.path}`"
-              >{{ itemy.name }}</router-link
-            >
-          </div>
-        </div> -->
     </aside>
 </template>
 

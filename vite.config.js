@@ -2,10 +2,8 @@ import path from 'path'
 import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
 import createBlockTitle from "./plugins/createBlockTitle";
-import Markdown from 'vite-plugin-md'
-import prism from 'markdown-it-prism'
-
-const markdownWrapperClasses = 'md-container prose prose-sm m-auto text-left'
+import mdPlugin, { Mode } from 'vite-plugin-markdown'
+import createRenderer from './plugins/mdRender'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -15,18 +13,17 @@ export default defineConfig({
       styles: path.resolve(__dirname, 'src/styles'),
       docs:  path.resolve(__dirname, 'docs'),
       markdown:  path.resolve(__dirname, 'markdown'),
+      plugins:  path.resolve(__dirname, 'plugins'),
       '@': path.resolve(__dirname, 'src'),
     },
   },
   plugins: [
-    Vue({ include: [/\.vue$/, /\.md$/],}), 
-    Markdown({
-      wrapperClasses: markdownWrapperClasses,
-      headEnabled: true,
-      markdownItUses: [
-        prism,
-      ],
-    }),
+    Vue(), 
+    mdPlugin({ 
+      mode: [Mode.HTML, Mode.TOC, Mode.VUE],
+      markdown: (content) => {
+        return createRenderer(content)
+      }}),
     createBlockTitle
   ]
 })

@@ -1,0 +1,17 @@
+.code-card {
+    position: relative;
+}
+.code-card .lang {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.code-card pre {
+    padding: 10px;
+    border-radius: 6px;
+    overflow: auto;
+    background-color: var(--bg-color-page);
+    font-size: 14px;
+}
