@@ -1,6 +1,7 @@
 ---
-title: Awesome Title
+title: 使用NodeJs构建属于自己的前端脚手工具
 description: Describe this awesome content
+coverImg: https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170
 path: get-started
 name: 快速开始
 tags:
@@ -9,8 +10,6 @@ tags:
   - "rad"
 ---
 
-![img](https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170)
-# 使用NodeJs构建属于自己的前端脚手工具
 ## 一.前言
 
 在日常开发中，我们经常会用到各种脚手架工具，如常用的`vue`和`react`脚手架工具：`vue-cli`、`Create React App`。只需要执行内置命令和选择内置条件就可以生成对应的项目模板。极大的提高了我们开发开发效率，所以我们能不能根据自己的日常业务构建属于自己的一套脚手架工具呢，答案是可以的。接下来步入本文章的主题

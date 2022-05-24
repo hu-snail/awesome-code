@@ -5,9 +5,6 @@
             <HeaderCompontent />
             <div class="doc-wrapper">
                 <Main />
-                <div class="anchor-content">
-                
-                </div>
             </div>
         </div>
     </div>
@@ -29,7 +26,7 @@ import Main from './main/index.vue'
         position: relative;
         top: var(--header-height);
         left: 320px;
-        width: calc(100vw - 280px);
+        width: calc(100vw - 320px);
         height: 100vh;
         overflow-y: auto;
         .doc-wrapper{
@@ -38,9 +35,6 @@ import Main from './main/index.vue'
             padding: 32px 24px 56px 56px;
             flex: 1;
             background-color: var(--bg-color-page);
-        }
-        .anchor-content {
-            width: 128px;
         }
     }
 }

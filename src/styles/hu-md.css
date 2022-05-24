@@ -4,15 +4,6 @@
     --primary-color-darker2: #0d5748;
     --primary-color-darker: #11977d;
 }
-
-.md-container {
-    color: var(--text-color);
-    max-width: 740px;
-    margin: 0 auto;
-    background-color: var(--bg-color);
-    padding: 15px 20px;
-    border-radius: 10px;
-}
 p {
     max-width: 100%;
     box-sizing: border-box;

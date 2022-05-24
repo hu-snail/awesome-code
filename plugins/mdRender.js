@@ -2,10 +2,12 @@ import { marked } from 'marked';
 import hljs from 'highlight.js'
 
 function createRenderer (content) {
+    let headingIndex = 0
     const renderer = {
         heading: (text, level) => {
             const id = text.replace(/ /g, '-')
-            return `<h${level} id="${id}" class="md-title">${text}</H${level}>`;
+            headingIndex++
+            return `<h${level} id="heading-${headingIndex}" class="md-title">${text}</h${level}>`;
         },
         code: (code, language) => {
             if (!language) language = 'shell'
