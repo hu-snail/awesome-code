@@ -8,26 +8,66 @@
         </div>
         <div class="card-item">
           <div class="card-item-content">
-            <icon-home color="#fff"></icon-home >
+           <svg class="iconfont" aria-hidden="true">
+              <use xlink:href="#icon-quanbu"></use>
+            </svg>
             <span class="card-item-title">首页</span>
           </div>
         </div>
         <div class="card-item">
           <div class="card-item-content active">
-            <icon-code color="#fff"></icon-code>
+            <svg class="iconfont" aria-hidden="true">
+              <use xlink:href="#icon-zujianxinxi"></use>
+            </svg>
             <span class="card-item-title">组件</span>
           </div>
         </div>
          <div class="card-item">
           <div class="card-item-content">
-            <icon-collect-laptop color="#fff"></icon-collect-laptop>
+             <svg class="iconfont" aria-hidden="true">
+              <use xlink:href="#icon-Vue"></use>
+            </svg>
             <span class="card-item-title">Vue物料</span>
           </div>
         </div>
         <div class="card-item">
           <div class="card-item-content">
-            <icon-code-brackets color="#fff"></icon-code-brackets>
+             <svg class="iconfont" aria-hidden="true">
+              <use xlink:href="#icon-js"></use>
+            </svg>
             <span class="card-item-title">Javascript</span>
+          </div>
+        </div>
+        <div class="card-item">
+          <div class="card-item-content">
+             <svg class="iconfont" aria-hidden="true">
+              <use xlink:href="#icon-react"></use>
+            </svg>
+            <span class="card-item-title">React物料</span>
+          </div>
+        </div>
+         <div class="card-item">
+          <div class="card-item-content">
+             <svg class="iconfont" aria-hidden="true">
+              <use xlink:href="#icon-CSS"></use>
+            </svg>
+            <span class="card-item-title">CSS</span>
+          </div>
+        </div>
+        <div class="card-item">
+          <div class="card-item-content">
+             <svg class="iconfont" aria-hidden="true">
+              <use xlink:href="#icon-html"></use>
+            </svg>
+            <span class="card-item-title">HTML</span>
+          </div>
+        </div>
+        <div class="card-item">
+          <div class="card-item-content">
+             <svg class="iconfont" aria-hidden="true">
+              <use xlink:href="#icon-Nodejs"></use>
+            </svg>
+            <span class="card-item-title">NodeJS</span>
           </div>
         </div>
       </div>
