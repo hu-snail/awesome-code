@@ -6,7 +6,24 @@ html.dark {
     --border-color: #4C4D4F;
     --color-header-bg: #191a2a;
 }
-
+html.huyan {
+    --bg-color-page: #c7ebca;
+    --bg-color: #d4f0d6;
+    --color-header-bg: #bee8c1;
+    --color-primary: #4fc058;
+}
+html.haitian {
+    --bg-color-page: #dce2f1;
+    --bg-color: #e9edf6;
+    --color-header-bg: #d3daed;
+    --color-primary: #7d94cb;
+}
+html.fugu {
+    --bg-color-page: #f2efdd;
+    --bg-color: #f7f5ea;
+    --color-header-bg: #eeebd5;
+    --color-primary: #cdc27d;
+}
 :root{
     /* color */
     --color-primary:#2caf92;;

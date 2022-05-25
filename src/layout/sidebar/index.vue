@@ -158,6 +158,8 @@ import { docMenus } from "@/routes/doc-routes.js";
         align-items: center;
         width: 100%;
         box-sizing: border-box;
+        position: relative;
+       
       }
       .menu-group-title {
         height: 36px;

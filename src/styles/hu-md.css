@@ -4,6 +4,15 @@
     --primary-color-darker2: #0d5748;
     --primary-color-darker: #11977d;
 }
+html.huyan {
+    --primary-color: #4fc058;
+}
+html.haitian {
+    --primary-color: #7d94cb;
+}
+html.fugu {
+    --primary-color: #cdc27d;
+}
 p {
     max-width: 100%;
     box-sizing: border-box;
@@ -12,7 +21,7 @@ p {
     text-align: justify;
 }
 p > code {
-    background-color: #e7f5ee;
+    background-color: var(--bg-color-page);
     color: var(--primary-color);
     border-radius: 4px;
     padding: 2px 6px;
