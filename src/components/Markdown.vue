@@ -48,9 +48,12 @@ const props = defineProps({
 const activeTitle = ref(null)
 const wrapper = ref(null)
 const img = ref(null)
+const tocList = ref([])
 
 const getClassName = (item, index) => {
-  return `anchor-item-${item.level} ${activeTitle.value === '#heading-' + (index + 1) ? 'active' : ''}`
+  if (tocList.value.indexOf(item.level) === -1) tocList.value.push(item.level)
+  const i = tocList.value.findIndex(option => item.level === option)
+  return `anchor-item-${i + 1} ${activeTitle.value === '#heading-' + (index + 1) ? 'active' : ''}`
 }
 
 const handleToTitle = (heading) => {
@@ -98,7 +101,7 @@ onMounted(() => {
   .anchor-content {
      width: 240px;
     box-sizing: border-box;
-    font-size: 14px;
+    font-size: 13px;
     .sticky-box {
       width: 240px;
       border-radius: 10px;
