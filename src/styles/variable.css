@@ -24,6 +24,13 @@ html.fugu {
     --color-header-bg: #eeebd5;
     --color-primary: #cdc27d;
 }
+html.darkest {
+    --bg-color-page: #171717;
+    --bg-color: #202020;
+    --color-header-bg: #111111;
+    --text-color: #E5EAF3;
+    --border-color: #4C4D4F;
+}
 :root{
     /* color */
     --color-primary:#2caf92;;
