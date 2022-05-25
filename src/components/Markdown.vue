@@ -1,8 +1,10 @@
 <template>
-  <div class="md-wrapper">
+  <div class="md-wrapper" ref="wrapper">
     <div class="md-container" @scroll="handleScroll">
-      <h1 class="md-title">{{attributes.title}}</h1>
-      <img v-if="attributes && attributes.coverImg" :src="attributes.coverImg" :alt="attributes.title" class="cover-img"/>
+      <div class="md-head" ref="mdHead">
+        <h1 class="md-title">{{attributes.title}}</h1>
+        <img ref="img" v-if="attributes && attributes.coverImg" :src="attributes.coverImg" :alt="attributes.title" class="cover-img"/>
+      </div>
       <article class="md-body" v-html="content"></article>
     </div>
     <div class="anchor-content">
@@ -14,6 +16,7 @@
           v-for="(item, index) in toc"
           :key="index"
           :class="getClassName(item, index)"
+          @click="handleToTitle(`#heading-${index + 1}`)"
           >
           <a class="anchor-item-title" :href="`#heading-${index + 1}`">
             <span v-html="decode(item.content)"></span>
@@ -42,14 +45,35 @@ const props = defineProps({
   }
 });
 
-const activeTitle = ref('#heading-1')
+const activeTitle = ref(null)
+const wrapper = ref(null)
+const img = ref(null)
+
 const getClassName = (item, index) => {
   return `anchor-item-${item.level} ${activeTitle.value === '#heading-' + (index + 1) ? 'active' : ''}`
 }
 
-const handleScroll = (e) => {
-  console.log(e)
+const handleToTitle = (heading) => {
+  activeTitle.value = heading
 }
+
+onMounted(() => {
+   nextTick(() => {
+     let scrollItems = document.querySelectorAll(".md-title");
+      wrapper.value.offsetParent.onscroll = function(e) {
+        let scrollItems = document.querySelectorAll(".md-title");
+        for (let i = scrollItems.length - 1; i >= 0; i--) {
+            // 判断滚动条滚动距离是否大于当前滚动项可滚动距离
+           const next = scrollItems[i + 1] ? scrollItems[i + 1].offsetTop : scrollItems[i].offsetTop
+            let judge = e.target.scrollTop >= next
+            if (judge) {
+                activeTitle.value = `#heading-${i + 1}`
+                break;
+            }
+        }
+      }
+  })
+})
 
 </script>
 
@@ -95,28 +119,42 @@ const handleScroll = (e) => {
       color: var(--text-color)
     }
     .anchor-item {
-      padding: 10px 10px;
+      position: relative;
+      padding: 5px 15px;
       box-sizing: border-box;
-      border-left: 3px solid transparent;
       &:hover {
-        background-color: var(--bg-color-page);
-        border-left: 3px solid var(--color-primary);
+         .anchor-item-title {
+          color: var(--color-primary);
+        }
       }
       &.active {
         .anchor-item-title {
           color: var(--color-primary);
         }
-        background-color: var(--bg-color-page);
-        border-left: 3px solid var(--color-primary);
+        // border-left: 3px solid var(--color-primary);
+        &::before{
+          content: "";
+          position: absolute;
+          top: 2px;
+          left: 0;
+          margin-top: 7px;
+          width: 4px;
+          height: 16px;
+          background: var(--color-primary);
+          border-radius: 0 4px 4px 0;
+        }
       }
       &-title {
         color: var(--text-color)
       }
-      &-3 {
+       &-2 {
         padding-left: 26px;
       }
-      &-4 {
+      &-3 {
         padding-left: 52px;
+      }
+      &-4 {
+        padding-left: 78px;
       }
 
     }
