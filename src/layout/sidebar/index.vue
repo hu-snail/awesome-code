@@ -103,7 +103,7 @@ import { docMenus } from "@/routes/doc-routes.js";
       } 
     }
     &-content {
-      background-color: var(--bg-color);
+      background-color: var(--color-header-bg);
       width: 220px;
       transition: all .3s cubic-bezier(.645,.045,.355,1),border 0s,color .1s,font-size 0s;
       .head-wrapper {
@@ -182,7 +182,7 @@ import { docMenus } from "@/routes/doc-routes.js";
       }
       .router-link-exact-active {
          color: var(--color-primary);
-        background-color: #e7f5ee;
+        background-color: var(--bg-color-page);
         border-radius: 3px;
       }
       }
