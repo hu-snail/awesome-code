@@ -33,7 +33,10 @@
       </div>
       <div class="aside-bar-card-content">
         <div class="head-wrapper">
-          <h2 class="title">AWESOME CODE</h2>
+          <div class="search-box">
+            <icon-search class="icon" color="#666"></icon-search>
+            <input placeholder="搜索" type="text" class="search-input">
+          </div>
         </div>
         <div class="menu-list">
           <div class="menu-group" v-for="(itemx, index) in docMenus" :key="index">
@@ -68,16 +71,16 @@ import { docMenus } from "@/routes/doc-routes.js";
   &-card {
     width: 100px;
     height: 100%;
-    background-color: #282c34;
+    background-color: var(--bg-color-page);
     .card-item {
       height: 64px;
       .logo{
         display: flex;
         justify-content: center;
-        color: #fff;
+        color: var(--text-color);
       }
       &-content{
-        width: 94px;
+        width: 84px;
         height: 54px;
         border-radius: 5px;
         display: flex;
@@ -86,19 +89,21 @@ import { docMenus } from "@/routes/doc-routes.js";
         overflow: hidden;
         text-align: center;
         margin: 0 auto;
-        color: #fff;
+        color: var(--text-color);
         justify-content: center;
         font-size: 14px;
         cursor: pointer;
         &.active {
-          background-color: var(--color-primary);
+          color: #fff;
+          background-color: var(--color-primary)
         }
         &:hover {
-             background-color: var(--color-primary);
+          color: var(--color-primary);
         }
       } 
     }
     &-content {
+      background-color: var(--bg-color);
       width: 220px;
       transition: all .3s cubic-bezier(.645,.045,.355,1),border 0s,color .1s,font-size 0s;
       .head-wrapper {
@@ -108,10 +113,38 @@ import { docMenus } from "@/routes/doc-routes.js";
         box-sizing: border-box;
         justify-content: center;
         align-items: center;
+        padding: 0 10px;
+        .search-box {
+          position: relative;
+          .icon {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+          }
+          .search-input {
+            background-color: var(--bg-color-page);
+            border: 0;
+            outline-style: none;
+            width: 190px;
+            height: var(--input-height);
+            padding: 0;
+            padding: 10px 20px;
+            box-sizing: border-box;
+            font-family: "Microsoft soft";
+            border-radius: var(--border-radius-round);
+            &:focus, &:hover {
+                background-color: var(--bg-color-page);
+                outline: 0;
+                -webkit-box-shadow: var(--docsearch-searchbox-shadow);
+                box-shadow: var(--docsearch-searchbox-shadow)
+            }
+          }
+        }
         .title {
           font-size: 16px;
           font-weight: 450;
           margin: 0;
+          color: var(--text-color)
         }
       }
       .menu-list {

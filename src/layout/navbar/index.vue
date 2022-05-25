@@ -7,11 +7,6 @@
                     <div class="item">指南</div>
                     <div class="item">Javascript</div>
                     <div class="item">Vue</div>
-                    <div class="search-box">
-                        <icon-search class="icon" color="#666"></icon-search>
-                        <input placeholder="搜索" type="text" class="search-input">
-                    </div>
-                   
                 </div>
             </div>
         </div>
@@ -45,32 +40,7 @@
                 justify-content: flex-end;
                 align-items: center;
                 flex-grow: 1;
-                .search-box {
-                    position: relative;
-                    .icon {
-                        position: absolute;
-                        right: 10px;
-                        top: 10px;
-                    }
-                    .search-input {
-                        background-color: var(--bg-color-page);
-                        border: 0;
-                        outline-style: none;
-                        min-width: 180px;
-                        height: var(--input-height);
-                        padding: 0;
-                        padding: 10px 20px;
-                        box-sizing: border-box;
-                        font-family: "Microsoft soft";
-                        border-radius: var(--border-radius-round);
-                        &:focus, &:hover {
-                            background-color: var(--bg-color-page);
-                            outline: 0;
-                            -webkit-box-shadow: var(--docsearch-searchbox-shadow);
-                            box-shadow: var(--docsearch-searchbox-shadow)
-                        }
-                    }
-                }
+                
                 .item {
                     padding: 0 15px;
                     cursor: pointer;

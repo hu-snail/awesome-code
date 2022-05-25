@@ -11,9 +11,11 @@
 </template>
 
 <script setup>
+import { ref } from 'vue'
 import HeaderCompontent from './navbar/index.vue'
 import SideBar from './sidebar/index.vue'
 import Main from './main/index.vue'
+
 </script>
 
 <style lang="scss" scoped>
@@ -23,7 +25,7 @@ import Main from './main/index.vue'
     overflow: hidden;
     display: flex;
     .main-wrapper {
-        position: relative;
+        position: fixed;
         top: var(--header-height);
         left: 320px;
         width: calc(100vw - 320px);
@@ -32,7 +34,7 @@ import Main from './main/index.vue'
         .doc-wrapper{
             display: flex;
             flex-wrap: nowrap;
-            padding: 32px 24px 56px 56px;
+            padding: 32px 56px 56px 56px;
             flex: 1;
             background-color: var(--bg-color-page);
         }

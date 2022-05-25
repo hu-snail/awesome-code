@@ -1,9 +1,9 @@
 <template>
   <div class="md-wrapper">
-    <div class="md-container">
+    <div class="md-container" @scroll="handleScroll">
       <h1 class="md-title">{{attributes.title}}</h1>
       <img v-if="attributes && attributes.coverImg" :src="attributes.coverImg" :alt="attributes.title" class="cover-img"/>
-      <article  v-html="content"></article>
+      <article class="md-body" v-html="content"></article>
     </div>
     <div class="anchor-content">
       <div class="sticky-box">
@@ -13,7 +13,7 @@
           class="anchor-item"
           v-for="(item, index) in toc"
           :key="index"
-          :class="'anchor-item-' + item.level"
+          :class="getClassName(item, index)"
           >
           <a class="anchor-item-title" :href="`#heading-${index + 1}`">
             <span v-html="decode(item.content)"></span>
@@ -26,7 +26,7 @@
 </template>
 
 <script setup>
-import {onMounted} from 'vue'
+import {onMounted, ref, nextTick} from 'vue'
 import { decode } from 'html-entities';
 
 const props = defineProps({
@@ -42,8 +42,13 @@ const props = defineProps({
   }
 });
 
-const handleToBlock = (id) => {
-  document.getElementById(id).scrollIntoView()
+const activeTitle = ref('#heading-1')
+const getClassName = (item, index) => {
+  return `anchor-item-${item.level} ${activeTitle.value === '#heading-' + (index + 1) ? 'active' : ''}`
+}
+
+const handleScroll = (e) => {
+  console.log(e)
 }
 
 </script>
@@ -51,13 +56,14 @@ const handleToBlock = (id) => {
 <style lang="scss" scoped>
 .md-wrapper {
   display: flex;
+  justify-content: center;
   .md-container {
     color: var(--text-color);
     max-width: 740px;
-    margin: 0 auto;
     background-color: var(--bg-color);
     padding: 15px 20px;
     border-radius: 10px;
+    overflow-y: scroll;
     .cover-img {
       width: 100%;
       border-radius: 8px;
@@ -66,13 +72,14 @@ const handleToBlock = (id) => {
     }
   }
   .anchor-content {
-    width: 240px;
+     width: 240px;
     box-sizing: border-box;
     font-size: 14px;
     .sticky-box {
-      padding: 15px 20px;
+      width: 240px;
       border-radius: 10px;
       position: fixed;
+      margin-left: 15px;
       top: 90px;
       bottom: 20px;
       background-color: var(--bg-color);
@@ -83,15 +90,24 @@ const handleToBlock = (id) => {
       }
     }
     .top-title {
-      padding-bottom: 10px;
+      padding: 10px;
       border-bottom: 1px solid #ddd;
+      color: var(--text-color)
     }
     .anchor-item {
       padding: 10px 10px;
       box-sizing: border-box;
+      border-left: 3px solid transparent;
       &:hover {
         background-color: var(--bg-color-page);
-        border-radius: 6px;
+        border-left: 3px solid var(--color-primary);
+      }
+      &.active {
+        .anchor-item-title {
+          color: var(--color-primary);
+        }
+        background-color: var(--bg-color-page);
+        border-left: 3px solid var(--color-primary);
       }
       &-title {
         color: var(--text-color)
