@@ -63,6 +63,7 @@ const handleToTitle = (heading) => {
 onMounted(() => {
    nextTick(() => {
      let scrollItems = document.querySelectorAll(".md-title");
+     if (!wrapper.value) return
       wrapper.value.offsetParent.onscroll = function(e) {
         let scrollItems = document.querySelectorAll(".md-title");
         for (let i = scrollItems.length - 1; i >= 0; i--) {

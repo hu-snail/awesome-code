@@ -22,7 +22,7 @@
 
 .iconfont {
   width: 2em;
-  height: 2em;
+  height: 1.8em;
   vertical-align: -0.15em;
   fill: currentColor;
   overflow: hidden;
@@ -41,7 +41,7 @@
   }
   /*定义滑块 内阴影+圆角*/
   ::-webkit-scrollbar-thumb {
-    background-color: #0003;
+    background-color: var(--bg-color-page);
     background-clip: padding-box;
     border-radius: 7px;
   }
