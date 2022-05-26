@@ -11,18 +11,24 @@ html.huyan {
     --bg-color: #d4f0d6;
     --color-header-bg: #bee8c1;
     --color-primary: #4fc058;
+    --color-scroll-bg: #7cd083;
+    --color-scroll: #a9e0ae;
 }
 html.haitian {
     --bg-color-page: #dce2f1;
     --bg-color: #e9edf6;
     --color-header-bg: #d3daed;
     --color-primary: #7d94cb;
+    --color-scroll-bg: #93a6d4;
+    --color-scroll: #bfcae5;
 }
 html.fugu {
     --bg-color-page: #f2efdd;
     --bg-color: #f7f5ea;
     --color-header-bg: #eeebd5;
     --color-primary: #cdc27d;
+    --color-scroll-bg: #d6cc93;
+    --color-scroll: #e7e1bf;
 }
 html.darkest {
     --bg-color-page: #171717;
@@ -30,6 +36,8 @@ html.darkest {
     --color-header-bg: #111111;
     --text-color: #E5EAF3;
     --border-color: #4C4D4F;
+    --color-scroll-bg: #313131;
+    --color-scroll: #171717;
 }
 :root{
     /* color */
@@ -39,6 +47,9 @@ html.darkest {
     --bg-color-overlay: #ffffff;
     --text-color: #303133;
     --color-header-bg: #ffffff;
+    --color-white: #ffffff;
+    --color-scroll-bg: #d7dadd;
+    --color-scroll: #edeff2;
 
     /* z-index */
     --nav-z-index: 20;

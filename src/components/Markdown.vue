@@ -16,7 +16,6 @@
           v-for="(item, index) in toc"
           :key="index"
           :class="getClassName(item, index)"
-          @click="handleToTitle(`#heading-${index + 1}`)"
           >
           <a class="anchor-item-title" :href="`#heading-${index + 1}`">
             <span v-html="decode(item.content)"></span>
@@ -56,10 +55,6 @@ const getClassName = (item, index) => {
   return `anchor-item-${i + 1} ${activeTitle.value === '#heading-' + (index + 1) ? 'active' : ''}`
 }
 
-const handleToTitle = (heading) => {
-  activeTitle.value = heading
-}
-
 onMounted(() => {
    nextTick(() => {
      let scrollItems = document.querySelectorAll(".md-title");
@@ -91,7 +86,6 @@ onMounted(() => {
     background-color: var(--bg-color);
     padding: 15px 20px;
     border-radius: 10px;
-    overflow-y: scroll;
     .cover-img {
       width: 100%;
       border-radius: 8px;

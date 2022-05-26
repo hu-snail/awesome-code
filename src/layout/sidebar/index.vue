@@ -134,8 +134,11 @@ import { docMenus } from "@/routes/doc-routes.js";
         font-size: 14px;
         cursor: pointer;
         &.active {
-          color: #fff;
-          background-color: var(--color-primary)
+          color: var(--color-white);
+          background-color: var(--color-primary);
+          &:hover{
+            color: var(--color-white);
+          }
         }
         &:hover {
           color: var(--color-primary);
