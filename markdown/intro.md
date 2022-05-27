@@ -27,8 +27,8 @@ tags:
 ::: warning 注意
 
 - 必须使用[Yarn1.x](https://yarnpkg.com/)，否则依赖可能安装不上。
-- [Node.js](http://nodejs.org/) 版本要求`12.x`以上，且不能为`13.x`版本，这里推荐 `14.x` 及以上。
 
+- [Node.js](http://nodejs.org/) 版本要求`12.x`以上，且不能为`13.x`版本，这里推荐 `14.x` 及以上。
 :::
 
 ## 工具配置
@@ -47,9 +47,7 @@ tags:
 ## 代码获取
 
 ::: warning 注意
-
 注意存放代码的目录及所有父级目录不能存在中文、韩文、日文以及空格，否则安装依赖后启动会出错。
-
 :::
 
 ### 从 GitHub 获取代码
@@ -71,9 +69,7 @@ git clone https://gitee.com/annsion/vue-vben-admin
 ```
 
 ::: warning 注意
-
 [Gitee](https://gitee.com/annsion/vue-vben-admin)的代码可能不是最新的
-
 :::
 
 ## 安装
