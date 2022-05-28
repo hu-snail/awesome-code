@@ -63,12 +63,15 @@ mark a:hover {
     font-size: 12px;
     cursor: pointer;
 }
-.code-card pre {
+pre {
     padding: 10px;
     border-radius: 6px;
     overflow: auto;
     background-color: var(--bg-color-page);
     font-size: 14px;
+}
+pre .token.operator {
+    background: transparent;
 }
 
  /*TABLE*/
