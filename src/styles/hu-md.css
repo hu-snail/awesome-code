@@ -127,3 +127,33 @@ table tr th:last-child,
 table tr td:last-child {
     margin-bottom: 0;
 }
+
+/* custom container */
+.custom-block {
+    margin: 1rem 0;
+    border-left: 0.2rem solid;
+    padding: 0.1rem 1.5rem;
+    overflow-x: auto;
+}
+.custom-block-title {
+    margin-bottom: -0.4rem;
+    font-weight: 600;
+}
+.custom-block.tip{
+    background-color: var(--bg-color-page);
+    border-color: var(--color-primary);
+}
+.custom-block.warning{
+    border-color: #e7c000;
+    color: #6b5900;
+    background-color: #ffe5644d;
+}
+.custom-block.danger{
+    border-color: #c00;
+    color: #4d0000;
+    background-color: #ffe6e6;
+}
+.custom-block.info{
+    background-color: #f3f5f7;
+    border-color: var(--c-text-light-2);
+}

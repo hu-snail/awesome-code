@@ -4,7 +4,10 @@ import Vue from '@vitejs/plugin-vue'
 import createBlockTitle from "./plugins/createBlockTitle";
 import mdPlugin, { Mode } from 'vite-plugin-markdown'
 import createRenderer from './plugins/mdRender'
-
+const markdownIt = require('markdown-it');
+import { containerPlugin } from './plugins/markdown/container'
+import { highlight } from './plugins/markdown/highlight'
+import { highlightLinePlugin } from './plugins/markdown/highlightLines'
 // https://vitejs.dev/config/
 export default defineConfig({
   resolve: {
@@ -22,8 +25,13 @@ export default defineConfig({
     mdPlugin({ 
       mode: [Mode.HTML, Mode.TOC, Mode.VUE],
       markdown: (content) => {
+        console.log('---')
         return createRenderer(content)
-      }}),
+      },
+      markdownIt: markdownIt({html: true, highlight})
+                  .use(containerPlugin)
+                  .use(highlightLinePlugin)
+    }),
     createBlockTitle
   ]
 })
