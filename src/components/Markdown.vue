@@ -17,7 +17,7 @@
           :key="index"
           :class="getClassName(item, index)"
           >
-          <a class="anchor-item-title" :href="`#heading-${index + 1}`">
+          <a class="anchor-item-title" :href="`#${decode(item.content)}`">
             <span v-html="decode(item.content)"></span>
             </a>
           </div>

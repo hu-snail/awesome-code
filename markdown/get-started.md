@@ -395,7 +395,7 @@ export { create, help };
 
 ### (八).工具类代码
 
-```
+```js
 export function hasTemplate(template) {
     return ['vue', 'vue-ts', 'react', 'react-ts'].includes(template)
 }
