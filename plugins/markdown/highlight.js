@@ -19,7 +19,6 @@ export const highlight = (str, lang) => {
     return wrap(str, 'text')
   }
   lang = lang.toLowerCase()
-  console.log(lang)
   const rawLang = lang
   if (lang === 'vue' || lang === 'html') {
     lang = 'markup'
@@ -45,7 +44,6 @@ export const highlight = (str, lang) => {
   }
   if (prism.languages[lang]) {
     const code = prism.highlight(str, prism.languages[lang], lang)
-    console.log(code)
     return wrap(code, rawLang)
   }
   return wrap(str, 'text')

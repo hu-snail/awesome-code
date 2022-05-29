@@ -57,7 +57,6 @@ const getClassName = (item, index) => {
 
 onMounted(() => {
    nextTick(() => {
-     let scrollItems = document.querySelectorAll(".md-title");
      if (!wrapper.value) return
       wrapper.value.offsetParent.onscroll = function(e) {
         let scrollItems = document.querySelectorAll(".md-title");
