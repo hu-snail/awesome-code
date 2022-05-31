@@ -3,6 +3,9 @@
     --primary-color-darkest: #083d33;
     --primary-color-darker2: #0d5748;
     --primary-color-darker: #11977d;
+    --warning-color: #6b5900;
+    --warning-color-bg: #ffe5644d;
+    --warning-color-border: #e7c000;
 }
 html.huyan {
     --primary-color: #4fc058;
@@ -12,6 +15,10 @@ html.haitian {
 }
 html.fugu {
     --primary-color: #cdc27d;
+}
+html.darkest {
+    --warning-color: #e7c000;
+    --warning-color-bg: var(--bg-color-page);
 }
 p {
     max-width: 100%;
@@ -147,9 +154,9 @@ table tr td:last-child {
     border-color: var(--color-primary);
 }
 .custom-block.warning{
-    border-color: #e7c000;
-    color: #6b5900;
-    background-color: #ffe5644d;
+    border-color: var(--warning-color-border);
+    color: var(--warning-color);
+    background-color: var(--warning-color-bg);
 }
 .custom-block.danger{
     border-color: #c00;
